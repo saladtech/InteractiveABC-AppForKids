@@ -1,0 +1,63 @@
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LearnActivity"
+    android:background="@color/Violet" >
+
+	<com.google.ads.AdView 
+	    android:id="@+id/adView" 
+	    android:layout_width="match_parent" 
+	    android:layout_height="wrap_content" 
+	    android:layout_alignParentTop="true" 
+	    android:layout_gravity="center" 
+	    ads:adSize="BANNER" 
+	    ads:adUnitId="a151e108c6c25a1" 
+	    ads:loadAdOnCreate="true" 
+	    android:visibility="visible"/>
+	
+	<com.appbrain.AppBrainBanner 
+	    android:id="@+id/appbrainadd" 
+	    android:layout_width="match_parent" 
+	    android:layout_height="wrap_content" 
+	    android:visibility="gone"
+	    android:alpha="20"	    
+	    android:layout_alignParentTop="true"/>
+	
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/adView"
+        android:layout_marginTop="10sp">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+	    android:paddingTop="@dimen/activity_vertical_margin"
+        android:src="@drawable/a" />
+
+    <ImageView
+        android:id="@+id/imageViewLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/left"
+        android:background="@color/transparent_black_hex_10" />
+
+    <ImageView
+        android:id="@+id/ImageViewRight"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/right"
+        android:background="@color/transparent_black_hex_10" />
+                </RelativeLayout>
+    
+    
+</RelativeLayout>
